@@ -9,8 +9,6 @@
   <ItemGroup>
     <Folder Include="Features\Departments\Queries\GetById\" />
     <Folder Include="Features\Departments\Queries\GetAll\" />
-    <Folder Include="Features\Employees\Commands\Delete\" />
-    <Folder Include="Features\Employees\Commands\Update\" />
     <Folder Include="DTOs\" />
     <Folder Include="DomainInterfaces\" />
     <Folder Include="Features\Employees\Queries\GetAll\" />

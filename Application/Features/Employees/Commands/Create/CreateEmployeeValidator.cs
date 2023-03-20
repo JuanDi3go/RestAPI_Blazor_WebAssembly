@@ -14,6 +14,8 @@ namespace Application.Features.Employees.Commands.Create
             RuleFor(p => p.Name).NotEmpty().WithMessage("{PropertyName} cant be empty").MaximumLength(100).WithMessage("{PropertyName} cannot exceed {MaximumLenght} ");
             RuleFor(p => p.Salary).NotEmpty().WithMessage("{PropertyName} cant be empty");
             RuleFor(p => p.ContractDate).NotEmpty().WithMessage("{PropertyName} cant be empty");
+            RuleFor(p => p.IdDepartment).NotEmpty().WithMessage("{PropertyName} cant be empty");
+
         }
     }
 }
