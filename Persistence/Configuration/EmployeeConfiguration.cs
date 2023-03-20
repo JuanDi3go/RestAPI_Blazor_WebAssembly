@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Persistence.Configuration
 {
-    public class EmployeeConfiguration : IEntityTypeConfiguration<Employe>
+    public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
     {
-        public void Configure(EntityTypeBuilder<Employe> builder)
+        public void Configure(EntityTypeBuilder<Employee> builder)
         {
-            builder.ToTable("Employes");
+            builder.ToTable("Employees");
             builder.HasKey(e => e.Id);
-            builder.HasOne(f => f.IdDepartmentNavigation).WithMany(f => f.Employes).HasForeignKey(f => f.Id)
+            builder.HasOne(f => f.IdDepartmentNavigation).WithMany(f => f.Employes).HasForeignKey(f => f.IdDepartment)
                 .HasConstraintName("FK_Employe_Departments");
             builder.Property(p => p.Salary).IsRequired();
             builder.Property(p => p.ContractDate).IsRequired();

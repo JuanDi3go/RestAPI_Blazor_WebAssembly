@@ -21,7 +21,7 @@ namespace Persistence.Context
         }
 
         public DbSet<Department> Departments { get; set; }
-        public DbSet<Employe> Employes { get; set; }
+        public DbSet<Employee> Employes { get; set; }
 
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

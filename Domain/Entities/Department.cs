@@ -10,6 +10,6 @@ namespace Domain.Entities
     public class Department:BaseEntity
     {
         public string Name { get; set; }
-        public ICollection<Employe> Employes { get; set; } = new List<Employe>();
+        public ICollection<Employee> Employes { get; set; } = new List<Employee>();
     }
 }

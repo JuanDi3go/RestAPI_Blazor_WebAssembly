@@ -6,7 +6,7 @@ namespace WebApi.Extensions
     {
         public static void ErrorHandligMiddleware(this IApplicationBuilder app) 
         {
-            app.UseMiddleware<ErroHandlerMiddleware>();
+            app.UseMiddleware<ErrorHandlerMiddleware>();
         }
     }
 }

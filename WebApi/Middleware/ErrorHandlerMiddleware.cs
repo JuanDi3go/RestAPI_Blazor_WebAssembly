@@ -5,11 +5,11 @@ using System.Text.Json;
 
 namespace WebApi.Middleware
 {
-    public class ErroHandlerMiddleware
+    public class ErrorHandlerMiddleware
     {
         private readonly RequestDelegate _next;
 
-        public ErroHandlerMiddleware(RequestDelegate next)
+        public ErrorHandlerMiddleware(RequestDelegate next)
         {
             _next = next;
         }

@@ -1,4 +1,6 @@
 ﻿using Application.Features.Departments.Commands.Create;
+using Application.Features.Departments.Commands.Update;
+using Application.Features.Employees.Commands.Create;
 using AutoMapper;
 using Domain.Entities;
 using System;
@@ -16,7 +18,9 @@ namespace Application.Mappings
             #region Commands
 
             CreateMap<CreateDepartmentCommand, Department>();
-
+            CreateMap<UpdateDepartmentCommand, Department>();
+            CreateMap<CreateEmployeeCommand, Employee>();
+            
             #endregion
         }
     }
