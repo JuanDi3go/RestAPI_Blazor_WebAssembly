@@ -11,5 +11,6 @@ namespace Domain.Entities
     {
         public string Name { get; set; }
         public ICollection<Employee> Employes { get; set; } = new List<Employee>();
+
     }
 }

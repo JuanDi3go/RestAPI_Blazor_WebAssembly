@@ -1,5 +1,7 @@
-﻿using Application.Features.Departments.Commands.Create;
+﻿using Application.DTOs;
+using Application.Features.Departments.Commands.Create;
 using Application.Features.Departments.Commands.Update;
+using Application.Features.Departments.Queries.GetById;
 using Application.Features.Employees.Commands.Create;
 using AutoMapper;
 using Domain.Entities;
@@ -15,10 +17,17 @@ namespace Application.Mappings
     {
         public GeneralProfile()
         {
+            #region DTOs
+
+            CreateMap<Department, DepartmentDTO>();
+            CreateMap<Employee, EmployeeDTO>();
+            #endregion
+
+
             #region Commands
 
             CreateMap<CreateDepartmentCommand, Department>();
-            CreateMap<UpdateDepartmentCommand, Department>();
+
             CreateMap<CreateEmployeeCommand, Employee>();
             
             #endregion
