@@ -2,6 +2,7 @@ using Application;
 using Shared;
 using Persistence;
 using WebApi.Extensions;
+using Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,10 +15,12 @@ builder.Services.AddSwaggerGen();
 
 //Services from other layers
 #region Services from other layers
+builder.Services.AddIdentityInfraestructure(builder.Configuration);
 builder.Services.AddSharedLayerServices();
 builder.Services.AddApplicationLayerServices();
 builder.Services.AddPersistenceLayerServices(builder.Configuration);
 builder.Services.AddApiVersioningExtension();
+
 #endregion
 
 
