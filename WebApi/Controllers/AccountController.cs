@@ -13,7 +13,7 @@ namespace WebApi.Controllers
         [HttpPost("authenticate")]
         public async Task<IActionResult> AuthenticateAsync(AuthenticationRequest request)
         {
-            return Ok(Mediator.Send(new AuthenticateUserCommand
+            return Ok( await Mediator.Send(new AuthenticateUserCommand
             {
                 Email = request.Email,
                 IpAddress = GenerateIpAddress(),
@@ -24,7 +24,7 @@ namespace WebApi.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> RegisterAsync(RegisterRequest request)
         {
-            return Ok(Mediator.Send(new RegisterUserCommand
+            return Ok( await Mediator.Send(new RegisterUserCommand
             {
                 Email = request.Email,
                 Origin = GenerateIpAddress(),

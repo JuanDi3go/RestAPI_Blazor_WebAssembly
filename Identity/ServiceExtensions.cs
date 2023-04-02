@@ -34,6 +34,7 @@ namespace Identity
 
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>().AddDefaultTokenProviders();
 
+            services.AddTransient<IAccountService, AccountService>();
 
 
             services.Configure<JWTSettings>(configuration.GetSection("JWTSettings"));
